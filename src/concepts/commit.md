@@ -1,31 +1,66 @@
-# Git Commit
+# Git Objects
 
-A git commit is a snapshot of the change information, hierarchy (Git tree),
-including the contents of the files (Git blob) in a Git repository.
+## What's a Git Commit?
 
+A git commit is a snapshot of the change information, hierarchy (**Git tree**),
+including the contents of the files (**Git blob**) in a Git repository.
+
+Every object (Git commit, Git tree, Git blob) is identified by it's hashsum.
+The hashsum is calculated with SHA1 and includes the hashsums of all linked
+objects.
+
+## Git Blob
+
+A git blob just contains binary data and doesn't link any other objects. Git
+calculates the hashsum as
+
+```{code-block} python
+---
+caption: Calculation of the git hash for a file in Python
+---
+
+import sys
+from hashlib import sha1
+from pathlib import Path
+
+file = Path(sys.argv[1])
+data = file.read_bytes()
+hashsum = sha1(f"blob {len(data)}\0{data.decode()}".encode()).hexdigest()
+print(hashsum)
 ```
-> git ls-tree b320f9bf554f56fd8dcad2db30bc02f23e2f90cd
-100644 blob 8396654bc46dfc2e35b3e039895ef41017cd27ef    .gitignore
-100644 blob f288702d2fa16d3cdf0035b15a9fcbc552cd88e7    LICENSE
-100644 blob d67b8618f193c63b97b9a7a62e90157eeab2684b    Makefile
-100644 blob fc06a0b33a8b78f94e76c869cbb1159838264458    README.md
-100644 blob 0c426f5978f8df4de07b977038e41024c129f56b    poetry.lock
-100644 blob c101f8a088333e882ee9c7bc1fb5fb75320f91e4    pyproject.toml
-040000 tree 91cb9aba1a3b41f362a225f2e5b6433316bed0e7    src
+## Git Tree
+
+A git tree contains hashes to other tree and blobs. It's hashsum is calculated
+from
+
+```{code-block} python
+---
+caption: Incomplete Python pseudocode for calculating the git tree hash
+---
+
+tree_data = f"tree {len(tree.content)} \0\n"
+linked_objects = [f"{obj.mode} {obj.file_or_folder_name}\0{obj.binary_sha1}" for obj in tree.objects]
+data = tree_data + "\n".join(linked_objects) + "\n"
+hashsum = sha1(data.encode()).hexdigest()
 ```
 
+## Git Commit
+
+A git commit contains the hashsum of the tree, parent commit and the commit
+information. The hashsum is calculated as follows
+
+```{code-block} python
+---
+caption: Incomplete Python pseudocode for calculating the git commit hash
+---
+
+commit_content = f"tree {tree.binary_sha1}\nparent {parent_commit.binary_sha1}\n{commit_information}"
+commit_data = f"commit {len(commit_content.encode())} \0{commit_content}\n"
+hashsum = sha1(commit_data.encode()).hexdigest()
 ```
-> git ls-tree 91cb9aba1a3b41f362a225f2e5b6433316bed0e7
-040000 tree 315da460c7ad9696f82ddb13bea6eca61aaa44bc    _static
-040000 tree e3869c4f5ffd97645ece7b066358d1e052a37e4c    add
-040000 tree ca2de8021adba336a944495cf3b04a30b44019f5    adjust
-100644 blob 3f56108820ce214055858e11eef03c3a1768caa9    agenda.md
-040000 tree db2e22d577a3dfa56203877cad1ddb32328b3d0a    concepts
-100644 blob 273138e091c41abef5f38337b04a20a024082b32    conf.py
-040000 tree 36faf1153c12b0c339a04937533e9ab5eb518880    config
-100644 blob 47f769ac172a5dc945cc3b0feee68bcccf3d4ddc    favicon.png
-100644 blob b67e55de02f413804ec84e33905834124ac997a5    index.md
-100644 blob 3a8533197b5fdc33a1b9c8fa41082ffa25314b54    introduction.md
-100644 blob f24398e79be1d689ff741b45b91f2167911d7bdf    next.md
-040000 tree 26be82717c6b3f7760e46fa4173c4adca7720f38    revert
-```
+
+Sources:
+
+* [https://git-scm.com/book/en/v2/Git-Internals-Git-Objects](https://git-scm.com/book/en/v2/Git-Internals-Git-Objects)
+* [https://stackoverflow.com/questions/14790681/what-is-the-internal-format-of-a-git-tree-object](https://stackoverflow.com/questions/14790681/what-is-the-internal-format-of-a-git-tree-object)
+* [https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated](https://stackoverflow.com/questions/35430584/how-is-the-git-hash-calculated)

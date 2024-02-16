@@ -1,6 +1,9 @@
 # Agenda
 
 * Git concepts (the basics)
+  * Distributed Version Control System
+  * Directed Acyclic Graph
+  * Git Objects
 * Git config
   * Host
   * Global

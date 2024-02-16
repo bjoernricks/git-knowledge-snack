@@ -17,5 +17,6 @@ Every git object is referenced by a **hashsum**, a SHA1 hash.
 distributed
 graph
 commit
+commit-example
 ```
 
