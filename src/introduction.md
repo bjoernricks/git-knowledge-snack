@@ -12,12 +12,12 @@
   * Department Co-Lead
   * Product Owner
   * DevOps Engineer
-* Started to work with Python in 2010 (Python 2.5)
 
 ### Contact
 
-|            |                                                                  |
-| ---------- | ---------------------------------------------------------------- |
-| Email      | <bjoern.ricks@greenbone.net>                                     |
-| Mattermost | @bjoern.ricks                                                    |
-| Website    | [https://bjoernricks.github.io/](https://bjoernricks.github.io/) |
+|            |                                                                          |
+| ---------- | ------------------------------------------------------------------------ |
+| Email      | <bjoern.ricks@greenbone.net>                                             |
+| Mattermost | @bjoern.ricks                                                            |
+| Mastodon   | [https://norden.social/@bjoernricks](https://norden.social/@bjoernricks) |
+| Website    | [https://bjoernricks.github.io/](https://bjoernricks.github.io/)         |
