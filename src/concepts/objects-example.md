@@ -93,3 +93,13 @@ caption: A git blob from the first git tree
 > git hash-object LICENSE
 f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
 ```
+
+```{code-block}
+---
+caption: Show contents of git blob from the first git tree
+---
+> git cat-file blob f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+...
+```

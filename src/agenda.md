@@ -4,6 +4,7 @@
   * Distributed Version Control System
   * Directed Acyclic Graph
   * Git Objects
+  * References
 * Git config
   * Host
   * Global
