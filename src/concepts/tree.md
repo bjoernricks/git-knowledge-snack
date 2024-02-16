@@ -1,7 +1,7 @@
 # Git Tree
 
-A git tree contains hashes for other trees and blobs. A blob in a tree
-represents a file and a linked tree represents a directory.
+A git tree links to blobs and other trees. A blob in a tree represents a file
+and a linked tree represents a directory with additional files and directories.
 
 ```{mermaid}
 flowchart TD

@@ -1,16 +1,16 @@
 # Git Concepts
 
-Git is a [**Distributed Version Control System**](https://en.wikipedia.org/wiki/Distributed_version_control).
+* Git is a [**Distributed Version Control System**](https://en.wikipedia.org/wiki/Distributed_version_control).
 
-A **version control system** saves the state of current source files.
+* A **version control system** saves the state of current source files.
 
-Every state is saved in a snapshot, the so called **commit**.
+* Every state is stored in a snapshot, the so called **commit**.
 
-The commits form a [**directed acyclic graph**](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
+* The commits form a [**directed acyclic graph**](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
 
-Every git object is identified by a **hashsum**, a SHA1 hash.
+* Every git object is identified by a **hashsum**, a SHA-1 hash.
 
-To not having to remember hashsums, git provides **references**.
+* To not having to remember hashsums, git provides **references**.
 
 
 ```{toctree}
@@ -20,6 +20,7 @@ distributed
 graph
 objects
 objects-example
+summary
 references
 ```
 

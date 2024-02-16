@@ -1,8 +1,9 @@
  # Directed Acyclic Graph
 
- A directed acyclic graph in the sense of git means
+ Git stores it's snapshots, the commits, in a directed acyclic graph. In the
+ sense of git this means
 
- * Commits reference their parents
+ * Commits reference their parent commits
  * Commits can either have zero, one or two parents
  * Only the first commit has no parent
  * A parent commit can not be a child of a commit (no cycles)
