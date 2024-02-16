@@ -8,7 +8,9 @@ Every state is saved in a snapshot, the so called **commit**.
 
 The commits form a [**directed acyclic graph**](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
 
-Every git object is referenced by a **hashsum**, a SHA1 hash.
+Every git object is identified by a **hashsum**, a SHA1 hash.
+
+To not having to remember hashsums, git provides **references**.
 
 
 ```{toctree}
@@ -16,7 +18,7 @@ Every git object is referenced by a **hashsum**, a SHA1 hash.
 
 distributed
 graph
-commit
-commit-example
+objects
+objects-example
 ```
 

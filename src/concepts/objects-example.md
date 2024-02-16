@@ -1,6 +1,11 @@
-# Git Commit - Example
+# Git Objects - Example
 
-```
+## Git Commit
+```{code-block}
+---
+caption: A git commit from https://github.com/bjoernricks/git-knowledge-snack
+---
+
 > git cat-file commit 5b675b466c60ad3e7d0ce044445d7a300e404d2a
 tree aabf9b570c38466c225f0e63de25f74b39391d40
 parent b320f9bf554f56fd8dcad2db30bc02f23e2f90cd
@@ -18,7 +23,36 @@ gpgsig -----BEGIN SSH SIGNATURE-----
 Change: Extend git commit chapter
 ```
 
+Parent commit
+
+```{code-block}
+---
+caption: The parent commit (initial commit without a parent)
+---
+
+> git cat-file commit b320f9bf554f56fd8dcad2db30bc02f23e2f90cd
+tree be868bd5d2971e5c2e374bd79bfa678cce1b7673
+author Björn Ricks <bjoern.ricks@greenbone.net> 1708007701 +0100
+committer Björn Ricks <bjoern.ricks@greenbone.net> 1708007701 +0100
+gpgsig -----BEGIN SSH SIGNATURE-----
+ U1NIU0lHAAAAAQAAAH8AAAAic2stZWNkc2Etc2hhMi1uaXN0cDI1NkBvcGVuc3NoLmNvbQ
+ AAAAhuaXN0cDI1NgAAAEEEO8opWOj6rxRQHsh4QZuMmbiD1fZ5tYA02MIDNKAI7ctXTX3q
+ 3HqQPum2qDiWC0ZzuRipXvDKHGhqxJPlQKXWQwAAAARzc2g6AAAAA2dpdAAAAAAAAAAGc2
+ hhNTEyAAAAdwAAACJzay1lY2RzYS1zaGEyLW5pc3RwMjU2QG9wZW5zc2guY29tAAAASAAA
+ ACBx5QfP3aO3zEaBvgtd7x6tpcmD4Tnq9QYsv5daTb2t1QAAACApdsBS9O0H6UTtl567HL
+ 8rjHy+0JxtQg6lMhh8XmqtMAEAAGOi
+ -----END SSH SIGNATURE-----
+
+Add: Initial commit
 ```
+
+## Git Tree
+
+```{code-block}
+---
+caption: The git tree of commit 5b675b466c60ad3e7d0ce044445d7a300e404d2a
+---
+
 > git ls-tree aabf9b570c38466c225f0e63de25f74b39391d40
 100644 blob 8396654bc46dfc2e35b3e039895ef41017cd27ef    .gitignore
 100644 blob f288702d2fa16d3cdf0035b15a9fcbc552cd88e7    LICENSE
@@ -29,12 +63,11 @@ Change: Extend git commit chapter
 040000 tree a9793f86dcd6eedf8b5323b8f10d469415bbb43a    src
 ```
 
-```
-> git hash-object LICENSE
-f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
-```
+```{code-block}
+---
+caption: The git tree within the tree aabf9b570c38466c225f0e63de25f74b39391d40 (src directory)
+---
 
-```
 > git ls-tree a9793f86dcd6eedf8b5323b8f10d469415bbb43a
 040000 tree 315da460c7ad9696f82ddb13bea6eca61aaa44bc    _static
 040000 tree e3869c4f5ffd97645ece7b066358d1e052a37e4c    add
@@ -50,19 +83,13 @@ f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
 040000 tree 26be82717c6b3f7760e46fa4173c4adca7720f38    revert
 ```
 
-```
-> git cat-file commit b320f9bf554f56fd8dcad2db30bc02f23e2f90cd
-tree be868bd5d2971e5c2e374bd79bfa678cce1b7673
-author Björn Ricks <bjoern.ricks@greenbone.net> 1708007701 +0100
-committer Björn Ricks <bjoern.ricks@greenbone.net> 1708007701 +0100
-gpgsig -----BEGIN SSH SIGNATURE-----
- U1NIU0lHAAAAAQAAAH8AAAAic2stZWNkc2Etc2hhMi1uaXN0cDI1NkBvcGVuc3NoLmNvbQ
- AAAAhuaXN0cDI1NgAAAEEEO8opWOj6rxRQHsh4QZuMmbiD1fZ5tYA02MIDNKAI7ctXTX3q
- 3HqQPum2qDiWC0ZzuRipXvDKHGhqxJPlQKXWQwAAAARzc2g6AAAAA2dpdAAAAAAAAAAGc2
- hhNTEyAAAAdwAAACJzay1lY2RzYS1zaGEyLW5pc3RwMjU2QG9wZW5zc2guY29tAAAASAAA
- ACBx5QfP3aO3zEaBvgtd7x6tpcmD4Tnq9QYsv5daTb2t1QAAACApdsBS9O0H6UTtl567HL
- 8rjHy+0JxtQg6lMhh8XmqtMAEAAGOi
- -----END SSH SIGNATURE-----
+## Git Blob
 
-Add: Initial commit
+```{code-block}
+---
+caption: A git blob from the first git tree
+---
+
+> git hash-object LICENSE
+f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
 ```
