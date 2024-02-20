@@ -6,7 +6,7 @@ referenced.
 
 ```{mermaid}
 ---
-caption: Example Git HEAD
+caption: Example from the last chapter showing HEAD
 ---
 gitGraph
     commit
@@ -20,4 +20,14 @@ gitGraph
     commit
     checkout main
     merge BranchA id: "HEAD"
+```
+
+Most git commands default to `HEAD` if no reference or hash is passed as an argument.
+
+For example:
+
+```
+git show --stat HEAD
+# is the same as
+git show --stat
 ```

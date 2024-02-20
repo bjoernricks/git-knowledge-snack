@@ -14,3 +14,14 @@ gitGraph
     commit tag: "SomeTag"
     commit
 ```
+
+The full tag reference is `refs/tags/<tag>` but can be abbreviated to just
+`<tag>`.
+
+For example:
+
+```
+git show --stat refs/tags/v0.1
+# is the same as
+git show --stat v0.1
+```

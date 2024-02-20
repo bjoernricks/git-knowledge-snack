@@ -1,6 +1,8 @@
 # Remotes
 
-A git remote reference points to a branch of a remote repository.
+Another dynamic reference which gets changed automatically (`git fetch`). The
+git remote reference points to the head commit of a branch in a remote
+repository.
 
 ```{mermaid}
 ---
@@ -12,10 +14,21 @@ gitGraph
     commit
     commit
     commit
-    branch BranchA
-    checkout BranchA
+    branch feature-a
+    checkout feature-a
     commit
     commit
     checkout main
-    merge BranchA
+    merge feature-a
+```
+
+The full remote reference is `refs/remotes/<remote>/<branch>` but can be
+abbreviated to just `<remote>/<branch>`.
+
+For example:
+
+```
+git show --stat refs/remotes/upstream/main
+# is the same as
+git show --stat upstream/main
 ```
