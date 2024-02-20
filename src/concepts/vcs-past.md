@@ -18,6 +18,8 @@ flowchart LR
 
 This architecture has serious consequences:
 * Not possible to create snapshots when being offline
+* Without a connection to the server snapshots and their changes can't be
+  inspected
 * Developers tend to publish their changes at the end of the work day
 * Incomplete or even broken features are published and downloaded
 * Code changes in single snapshots are rather big

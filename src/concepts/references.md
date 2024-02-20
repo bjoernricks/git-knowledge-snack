@@ -1,20 +1,21 @@
 # Git References
 
-As shown every git object is identified by a SHA-1 hash. For not having to
-remember git hashes for addressing specific commits, it would be easier if you
-had a file in which you could store that SHA-1 value under a simple name so you
-could use that simple name rather than the raw SHA-1 value.
+For not having to remember git hashes for addressing specific commits, it would
+be easier to to link a commit to a simple name so you could use that simple name
+rather than the SHA-1 value.
 
 In Git, these names are called *references* or *refs*.
 
 Most important references are:
 
-* tags
-* branches
-* HEAD
+```{toctree}
+refs-tags
+refs-branches
+refs-remotes
+refs-head
+```
 
-## Tags
+Sources:
 
-## Branches
+* [https://git-scm.com/book/en/v2/Git-Internals-Git-References](https://git-scm.com/book/en/v2/Git-Internals-Git-References)
 
-## HEAD reference
