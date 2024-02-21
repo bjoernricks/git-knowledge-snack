@@ -23,12 +23,4 @@ $ cat .git/refs/remotes/upstream/main
 6227630dd590a9c3c6014eed15a18a639448f86d
 ```
 
-Example usage of references:
-
-```
-git log --oneline HEAD
-git log --oneline refs/heads/main
-git log --oneline main
-git log --oneline refs/remotes/upstream/main
-git log --oneline upstream/main
-```
+In the above example all references point to the same commit.

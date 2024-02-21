@@ -26,4 +26,5 @@ flowchart LR
     C --> A
 ```
 
-Because of these advantages git conquered the world of version control systems.
+Because of these advantages (and good marketing) git conquered the world of
+version control systems.

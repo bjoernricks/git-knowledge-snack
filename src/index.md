@@ -6,9 +6,5 @@
 agenda
 introduction
 concepts/index
-config/index
-add/index
-revert/index
-adjust/index
 next
 ```
