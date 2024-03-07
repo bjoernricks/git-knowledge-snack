@@ -24,3 +24,9 @@ To build static HTML content run:
 ```sh
 poetry run make html
 ```
+
+## License
+
+Copyright (C) 2024 Björn Ricks
+
+Licensed under the [CC-BY-SA-4.0](LICENSE).

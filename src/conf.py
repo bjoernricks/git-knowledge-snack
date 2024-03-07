@@ -9,7 +9,7 @@
 from datetime import date
 
 project = "Git Knowledge Snack"
-copyright = f"{date.today().year}, Björn Ricks"
+copyright = f"{date.today().year}, Björn Ricks CC-BY-SA-4.0"
 author = "Björn Ricks"
 release = "1.0.0"
 
