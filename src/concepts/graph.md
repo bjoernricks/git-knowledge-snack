@@ -1,12 +1,14 @@
  # Directed Acyclic Graph
 
  Git stores it's snapshots, the commits, in a directed acyclic graph. In the
- sense of git this means
+ sense of git this means:
 
- * Commits are linked to their parent commits
+ * Commits are linked to their parent commits (directed)
+ * A commit can not be a child of itself, directly or indirectly (acyclic)
+
+ Additionally:
  * A single commits can either have zero, one or two parents
  * Only the first commit has no parent
- * A parent commit can not be a child of a commit directly or indirectly (no cycles)
 
 ```{mermaid}
 ---
