@@ -8,6 +8,7 @@
 
  Additionally:
  * A single commits can either have zero, one or two parents
+ * But different commits can have the same parent
  * Only the first commit has no parent
 
 ```{mermaid}
