@@ -8,7 +8,7 @@ Website: https://bjoernricks.github.io/git-knowledge-snack/
 To install the dependencies to build and run the docs run:
 
 ```sh
-poetry install --no-root
+poetry install
 ```
 
 ## Live Server
