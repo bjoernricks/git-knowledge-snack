@@ -40,7 +40,7 @@ html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_logo = "_static/logo.svg"
 
-repo_url = "https://github.com/bjoernricks/git-snack"
+repo_url = "https://github.com/bjoernricks/git-knowledge-snack"
 html_theme_options = {
     "source_repository": repo_url,
     "source_branch": "main",
