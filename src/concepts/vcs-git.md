@@ -1,4 +1,4 @@
-# Git to Rule the World
+# Git as a Distributed Version Control System
 
 To mitigate these consequences distributed version control systems like git were
 created. Instead of relying on a client/server architecture, a peer-to-peer like
@@ -13,7 +13,7 @@ Changes and advantages:
 * Every code change can be inspected locally anytime without network connection
 * Information is distributed between different *clones* of the repository
     * Doesn't mean all repositories share all information
-    * Repositories may hold only parts of the code changes
+    * Because repositories may hold only parts of the code changes
 * There is no single *source of truth* for a repository anymore
     * Every repository can be the *master*
     * There doesn't need to be a *master*

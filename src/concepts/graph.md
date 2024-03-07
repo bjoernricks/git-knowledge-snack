@@ -53,7 +53,6 @@ gitGraph
     checkout main
     merge develop id: "F"
     commit id: "G"
-    commit id: "H"
 ```
 
 ```{mermaid}

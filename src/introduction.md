@@ -12,6 +12,7 @@
   * Department Co-Lead
   * Product Owner
   * DevOps Engineer
+  * Community Manager
 
 ## Contact
 
