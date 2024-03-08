@@ -7,7 +7,7 @@ understand all objects we need to take a look at the git commit in detail.
 
 A git commit is a snapshot of the change information (who, what, when, why,
 parent) and a file and directory hierarchy (**Git tree**). This hierarchy
-includes the contents of the files (**Git blob**).
+includes additional trees and the contents of the files (**Git blob**).
 
 So a commit actually consists of three git objects,
 
