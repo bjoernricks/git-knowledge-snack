@@ -87,19 +87,19 @@ caption: The git tree within the tree aabf9b570c38466c225f0e63de25f74b39391d40 (
 
 ```{code-block}
 ---
-caption: A git blob from the first git tree
----
-
-> git hash-object LICENSE
-f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
-```
-
-```{code-block}
----
 caption: Show contents of git blob from the first git tree
 ---
 > git cat-file blob f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 ...
+```
+
+```{code-block}
+---
+caption: Get the git hash for a file
+---
+
+> git hash-object LICENSE
+f288702d2fa16d3cdf0035b15a9fcbc552cd88e7
 ```

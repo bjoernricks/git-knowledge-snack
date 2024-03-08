@@ -7,4 +7,4 @@
 In conclusion if a single bit of a file or even in a commit gets manipulated the
 whole graph of commits will be invalid because all hashes will change.
 
-Git ensures the integrity of your repository and change history.
+**Git ensures the integrity of your repository and change history.**

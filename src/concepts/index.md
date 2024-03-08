@@ -6,7 +6,7 @@
 * The commits form a [**directed acyclic graph**](https://en.wikipedia.org/wiki/Directed_acyclic_graph).
 * Git uses different **objects** to store information
 * Every git object is identified by a **hashsum**, a SHA-1 hash.
-* To not having to remember hashsums, git provides **references**.
+* To not having to remember hashes when referring to commits, git provides **references**.
 * All git information about a repository is contained in a **single `.git` directory**
 
 

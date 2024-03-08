@@ -1,6 +1,6 @@
  # Directed Acyclic Graph
 
- Git stores it's snapshots, the commits, in a directed acyclic graph. In the
+ Git stores its snapshots, the commits, in a directed acyclic graph. In the
  sense of git this means:
 
  * Commits are linked to their parent commits (directed)
